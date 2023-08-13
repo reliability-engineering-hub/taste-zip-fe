@@ -1,6 +1,6 @@
 const Diaries = () => {
-    return <div>
-        <h2>맛집 다이어리 메인 페이지</h2>
+    return <div className="Diaries">
+        <h2>taste.zip</h2>
     </div>
 }
 
