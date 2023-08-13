@@ -1,6 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Gowun+Dodum&display=swap');
+/* Header */
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
 
-.Diaries {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid whitesmoke;
+}
+
+header > div {
+    display: flex;
+}
+
+header .head_text {
+    width: 50%;
+
     font-family: "Gaegu", serif;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bold;
+
+    justify-content: center;
+}
+
+header .left_head {
+    width: 25%;
+
+    justify-content: start;
+}
+
+header .right_head {
+    width: 25%;
+
+    justify-content: start;
+}
+
+/* Body */
+body {
+    background-color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Gowun Dodum", serif;
+
+    min-height: 100vh;
+    margin: 0px;
+}
+
+@media (min-width: 650px) {
+    .App {
+        width: 640px;
+    }
+}
+
+@media (max-width: 650px) {
+    .App {
+        width: 90vw;
+    }
+}
+
+#root {
+    background-color: white;
+    box-shadow: rgba(100, 100, 110, 0.2) 0px 7px 29px 0px;
+}
+
+.App {
+    min-height: 100vh;
+
+
+    padding-left: 20px;
+    padding-right: 20px;
+
 }
