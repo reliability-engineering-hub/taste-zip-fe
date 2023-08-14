@@ -73,3 +73,89 @@ body {
     padding-right: 20px;
 
 }
+
+/* Hamburger button */
+.HamburgerButton {
+    width: 35px;
+    height: 25px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.HamburgerButton div {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: 0.4s;
+    position: relative;
+}
+
+.HamburgerButton .bread {
+    background-color: orange;
+}
+
+.HamburgerButton .patty {
+    background-color: red;
+}
+
+.HamburgerButton.active div:nth-child(1) {
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+.HamburgerButton.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.HamburgerButton.active div:nth-child(3) {
+    top: -10px;
+    transform: rotate(45deg);
+}
+
+/* Side bar */
+
+.Sidebar {
+    position: fixed;
+    width: 300px;
+    top: 0;
+
+
+    height: 100%;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    transition: 0.5s;
+    color: black;
+    padding-top: 60px;
+    z-index: 1;
+}
+
+/* NavigateBar */
+.NavigateBar {
+    background-color: whitesmoke;
+    border-bottom: 3px solid white;
+}
+
+.NavigateButton {
+    background: none;
+    border: none;
+    font-family: "Gowun Dodum", serif;
+
+    font-weight: bold;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    transition: color 0.3s;
+
+}
+
+.NavigateBar:hover {
+    color: azure;
+}
