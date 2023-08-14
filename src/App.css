@@ -32,7 +32,7 @@ header .left_head {
 header .right_head {
     width: 25%;
 
-    justify-content: start;
+    justify-content: end;
 }
 
 /* Body */
@@ -158,4 +158,130 @@ body {
 
 .NavigateBar:hover {
     color: azure;
+}
+
+/* HeaderButton */
+.HeaderButton {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-size: 20px;
+
+    white-space: nowrap;
+    font-family: "Gaegu", serif;
+}
+
+.HeaderButton_back {
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.HeaderButton_save {
+    background-color: palegreen;
+}
+
+/* DiaryEditor */
+.DiaryEditor .DiaryTitle {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+
+    padding: 10px;
+    border: 2px solid ghostwhite;
+    font-size: 20px;
+    font-family: "Gowun Dodum", serif;
+    font-weight: bold;
+}
+
+.DiaryEditor .DiaryDate {
+    width: 70%;
+    box-sizing: border-box;
+    margin-top: 20px;
+
+    padding: 10px;
+    border: 2px solid ghostwhite;
+    font-family: "Gowun Dodum", serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.DiaryEditor .DiaryContent {
+    font-family: "Gowun Dodum", serif;
+    font-size: 20px;
+
+    margin-top: 100px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 300px;
+    resize: vertical;
+
+    border: 2px solid ghostwhite;
+    border-radius: 5px;
+    padding: 20px;
+}
+.DiaryEditor .evaluation_list_wrapper {
+    border: 2px solid black;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    gap: 2%;
+}
+
+/* EvaluationItem */
+.EvaluationItem {
+    cursor: pointer;
+
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.EvaluationItem img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.EvaluationItem span {
+    font-size: 18px;
+}
+
+.EvaluationItem_off {
+    background-color: #ececec;
+}
+
+.EvaluationItem_on_1 {
+    background-color: #64c964;
+    color: white;
+}
+
+.EvaluationItem_on_2 {
+    background-color: #9dd772;
+    color: white;
+}
+
+.EvaluationItem_on_3 {
+    background-color: #fdce17;
+    color: white;
+}
+
+.EvaluationItem_on_4 {
+    background-color: #fd8446;
+    color: white;
+}
+
+.EvaluationItem_on_5 {
+    background-color: #fd565f;
+    color: white;
 }
