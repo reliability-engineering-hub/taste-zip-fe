@@ -82,6 +82,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+
     justify-content: space-between;
     cursor: pointer;
     z-index: 2;
@@ -160,8 +161,8 @@ body {
     color: azure;
 }
 
-/* HeaderButton */
-.HeaderButton {
+/* CustomButton */
+.CustomButton {
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -177,14 +178,30 @@ body {
     font-family: "Gaegu", serif;
 }
 
-.HeaderButton_back {
+.CustomButton_back {
     background: none;
     font-size: 20px;
     font-weight: bold;
 }
 
-.HeaderButton_save {
+.CustomButton_save {
     background-color: palegreen;
+}
+
+.CustomButton_find {
+    background-color: palegreen;
+}
+
+.CustomButton_meal {
+    border-radius: 50%;
+
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.CustomButton_meal.on {
+    background-color: pink;
 }
 
 /* DiaryEditor */
@@ -200,6 +217,16 @@ body {
     font-weight: bold;
 }
 
+.DiaryEditor .RestaurantName {
+    width: 85%;
+    box-sizing: border-box;
+    margin-top: 20px;
+
+    padding: 10px;
+    border: 2px solid ghostwhite;
+    font-size: 20px;
+    font-family: "Gowun Dodum", serif;
+}
 .DiaryEditor .DiaryDate {
     width: 70%;
     box-sizing: border-box;
@@ -216,7 +243,7 @@ body {
     font-family: "Gowun Dodum", serif;
     font-size: 20px;
 
-    margin-top: 100px;
+    margin-top: 10px;
     box-sizing: border-box;
     width: 100%;
     min-height: 300px;
@@ -233,6 +260,39 @@ body {
     grid-template-columns: repeat(5, minmax(100px, 1fr));
     gap: 2%;
 }
+
+.DiaryEditor .meal_box {
+    margin-top: 20px;
+
+    border: 2px solid black;
+
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(1px, 1fr));
+    gap: 2%;
+}
+
+.FindRestaurant {
+    display: flex;
+}
+
+.FindRestaurantButton {
+    width: 15%;
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.MealDate {
+    display: flex;
+}
+
+.MealTime {
+    display: flex;
+}
+
 
 /* EvaluationItem */
 .EvaluationItem {
@@ -283,5 +343,40 @@ body {
 
 .EvaluationItem_on_5 {
     background-color: #fd565f;
+    color: white;
+}
+
+.MealItem {
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.MealItem img {
+    width: 50px;
+}
+.MealItem span {
+    font-size: 15px;
+}
+
+.MealItem_on_1 {
+    font-weight: bold;
+    background-color: orange;
+    color: black;
+}
+
+.MealItem_on_2 {
+    font-weight: bold;
+    background-color: yellow;
+    color: black;
+}
+
+.MealItem_on_3 {
+    font-weight: bold;
+    background-color: blueviolet;
     color: white;
 }

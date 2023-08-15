@@ -1,7 +1,7 @@
 import Header from "../component/Header";
 import NewDiary from "../component/NewDiary";
 import {useNavigate} from "react-router-dom";
-import HeaderButton from "../component/HeaderButton";
+import CustomButton from "../component/CustomButton";
 
 const New = () => {
     const navigate = useNavigate();
@@ -10,12 +10,14 @@ const New = () => {
         <div>
             <Header
                 headText={"taste.zip"}
-                leftChild={<HeaderButton
+                leftChild={
+                <CustomButton
                     text={"<"}
                     type={"back"}
                     onClick={() => navigate(-1)}
                 />}
-                rightChild={<HeaderButton
+                rightChild={
+                <CustomButton
                         text={"저장"}
                         type={"save"}
                 />}
