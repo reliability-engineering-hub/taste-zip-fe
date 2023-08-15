@@ -1,11 +1,18 @@
 import Items from "./Items";
 import {findEvaluationById} from "../util/Evaluation";
+import {useNavigate} from "react-router-dom";
 
 const DiaryItem = ({diary}) => {
+    const navigate = useNavigate();
+
+    const goDetail = () => {
+        navigate(`diaries/${diary.id}`)
+    }
     const evaluation = findEvaluationById(diary.evaluation);
-    console.log(evaluation)
     return (
-        <div className="DiaryItem">
+        <div
+            className="DiaryItem"
+            onClick={goDetail}>
             <div className="RestaurantName">{diary.restaurant.name}</div>
             <div className="DiaryTitle">{diary.title}</div>
             <div className="EatDateAndEvaluation">
@@ -15,7 +22,7 @@ const DiaryItem = ({diary}) => {
                         type={"Evaluation"}
                         key={diary.evaluation}
                         {...evaluation}
-                        onClick={() => {}}
+                        onClick={goDetail}
                     />
                 </div>
             </div>
