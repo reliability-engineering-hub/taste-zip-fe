@@ -380,3 +380,43 @@ body {
     background-color: blueviolet;
     color: white;
 }
+
+/* DiaryItem */
+.DiaryItem {
+    border: 1px solid darkgrey;
+    cursor: pointer;
+
+    padding: 10px;
+    margin-top : 10px;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+
+    font-weight: bold;
+}
+
+
+.RestaurantName,
+.DiaryTitle,
+.EatDate {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.EatDateAndEvaluation {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+
+.EvaluationByMainPage, .EvaluationByMainPage * {
+    margin: 0;
+    padding: 0;
+}
+
+.EvaluationByMainPage span {
+    font-size: 12px;
+}

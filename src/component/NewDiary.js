@@ -13,9 +13,9 @@ const NewDiary = ({onDataUpdate}) => {
         title: '',
         eatDate: '',
         restaurant : {
-            name: '',
-            address: '',
-            image: '',
+            name: 'dummy',
+            address: 'dummy',
+            image: 'dummy',
         },
         content: '',
         evaluation: '',

@@ -25,3 +25,7 @@ export const evaluations = [
         description: '매우 불만족'
     },
 ];
+
+export function findEvaluationById(id) {
+    return evaluations.find((it) => parseInt(it.id) === parseInt(id));
+}

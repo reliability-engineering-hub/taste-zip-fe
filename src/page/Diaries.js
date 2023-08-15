@@ -2,6 +2,7 @@ import Header from "../component/Header";
 import HamburgerButton from "../component/HamburgerButton";
 import Sidebar from "../component/Sidebar";
 import {useState} from "react";
+import DiaryList from "../component/DiaryList";
 
 const Diaries = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Diaries = () => {
                 isActive={isOpen}/>}
         />
         {isOpen && <Sidebar />}
-        <h2>다이어리 목록 페이지</h2>
+        <DiaryList />
     </div>
 }
 
