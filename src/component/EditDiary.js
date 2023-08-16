@@ -1,5 +1,5 @@
 import Items from "./Items";
-import {findEvaluationById} from "../util/Evaluation";
+import {evaluations, findEvaluationById} from "../util/Evaluation";
 
 const EditDiary = ({diary, isEdit}) => {
     const evaluation = findEvaluationById(diary.evaluation);
@@ -27,12 +27,26 @@ const EditDiary = ({diary, isEdit}) => {
                 />
             </div>
             <div>
-                <Items
-                    type="Evaluation"
-                    key={diary.evaluation}
-                    {...evaluation}
-                    onClick={() => {}}
-                />
+                {
+                    isEdit ?
+                        <div className="input_box evaluation_list_wrapper">
+                            {evaluations.map((it) =>
+                            <Items
+                                type="Evaluation"
+                                key={it.id}
+                                {...it}
+                                onClick={() => {}}
+                                isSelected={it.id === evaluation}
+                            />)}
+                        </div> :
+                        <Items
+                            type="Evaluation"
+                            key={diary.evaluation}
+                            {...evaluation}
+                            onClick={() => {}}
+                        />
+                }
+
             </div>
             <div>
                 <textarea

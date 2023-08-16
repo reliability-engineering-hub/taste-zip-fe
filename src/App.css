@@ -253,7 +253,7 @@ body {
     border-radius: 5px;
     padding: 20px;
 }
-.DiaryEditor .evaluation_list_wrapper {
+.evaluation_list_wrapper {
     border: 2px solid black;
 
     display: grid;
