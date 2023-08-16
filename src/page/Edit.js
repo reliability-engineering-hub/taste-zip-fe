@@ -1,11 +1,11 @@
 import Header from "../component/Header";
 import CustomButton from "../component/CustomButton";
 import {useNavigate, useParams} from "react-router-dom";
+import EditDiary from "../component/EditDiary";
 import {useContext} from "react";
 import {DiaryStateContext} from "../App";
-import EditDiary from "../component/EditDiary";
 
-const Diary = () => {
+const Edit = () => {
     const navigate = useNavigate();
     const state = useContext(DiaryStateContext);
     const {id} = useParams();
@@ -13,7 +13,7 @@ const Diary = () => {
     const diary = diaries.find((it) => parseInt(it.id) === parseInt(id));
 
     return (
-        <div className="DiaryDetail">
+        <div>
             <Header
                 headText={"taste.zip"}
                 leftChild={
@@ -24,16 +24,14 @@ const Diary = () => {
                     />}
                 rightChild={
                     <CustomButton
-                        text={"수정"}
-                        type={"modify"}
-                        onClick={() => {navigate(`/diaries/${id}/edit`)}}
+                        text={"삭제"}
+                        type={"delete"}
+                        onClick={() => {}}
                     />}
             />
-            {
-                diary && <EditDiary diary={diary} isEdit={false}/>
-            }
+            {diary && <EditDiary diary={diary} isEdit={true}/>}
         </div>
     )
 }
 
-export default Diary;
+export default Edit;
