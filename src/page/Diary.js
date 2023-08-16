@@ -5,7 +5,7 @@ import {useContext} from "react";
 import {DiaryStateContext} from "../App";
 import EditDiary from "../component/EditDiary";
 
-const Edit = () => {
+const Diary = () => {
     const navigate = useNavigate();
     const state = useContext(DiaryStateContext);
     const {id} = useParams();
@@ -36,4 +36,4 @@ const Edit = () => {
     )
 }
 
-export default Edit;
+export default Diary;

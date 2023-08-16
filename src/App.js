@@ -3,7 +3,7 @@ import './App.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import React from "react";
 import New from "./page/New";
-import Edit from "./page/Edit";
+import Diary from "./page/Diary";
 
 export const DiaryStateContext = React.createContext();
 
@@ -24,7 +24,7 @@ function App() {
                     <Routes>
                         <Route path='/' element={<Diaries/>}/>
                         <Route path='/diaries/new' element={<New/>}/>
-                        <Route path='/diaries/:id' element={<Edit/>}/>
+                        <Route path='/diaries/:id' element={<Diary/>}/>
                     </Routes>
                 </div>
             </BrowserRouter>
