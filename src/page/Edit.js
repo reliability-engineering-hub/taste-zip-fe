@@ -3,6 +3,7 @@ import CustomButton from "../component/CustomButton";
 import {useNavigate, useParams} from "react-router-dom";
 import {useContext} from "react";
 import {DiaryStateContext} from "../App";
+import EditDiary from "../component/EditDiary";
 
 const Edit = () => {
     const navigate = useNavigate();
@@ -28,11 +29,9 @@ const Edit = () => {
                         onClick={() => {}}
                     />}
             />
-            {diary.title} <br/>
-            {diary.eatDate} <br/>
-            {diary.restaurant.name} <br/>
-            {diary.evaluation} <br/>
-            {diary.content} <br/>
+            {
+                diary && <EditDiary diary={diary} isEdit={false}/>
+            }
         </div>
     )
 }
